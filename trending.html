@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trending Movies</title>
+    <style>
+        body {
+            background-color: black;
+            color: #ffcc00; /* Golden yellow text */
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+        }
+        h1 {
+            font-size: 36px;
+            font-weight: bold;
+            margin-bottom: 20px;
+            text-align: center;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            color: #ffcc00; /* Golden yellow text */
+        }
+        .scroll-container {
+            width: 90%;
+            max-width: 1200px;
+            height: 80vh;
+            overflow-y: auto;
+            scrollbar-width: thin;
+            scrollbar-color: #ffcc00 black; /* Golden yellow scrollbar thumb */
+            margin-bottom: 20px;
+        }
+        .container {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr); /* Two columns */
+            grid-gap: 15px;
+            padding: 10px;
+        }
+        .movie {
+            border: 2px solid #ffcc00; /* Golden yellow border */
+            padding: 10px;
+            text-align: center;
+            border-radius: 10px;
+            background-color: rgba(255, 255, 255, 0.1);
+            transition: transform 0.3s ease, opacity 0.3s ease;
+        }
+        .movie:hover {
+            transform: scale(1.05);
+            opacity: 0.9;
+        }
+        .movie img {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+            border-radius: 5px;
+            transition: transform 0.3s ease;
+        }
+        .movie img:hover {
+            transform: scale(1.1);
+        }
+        /* Custom scrollbar styling */
+        .scroll-container::-webkit-scrollbar {
+            width: 8px;
+        }
+        .scroll-container::-webkit-scrollbar-thumb {
+            background-color: #ffcc00; /* Golden yellow scrollbar thumb */
+            border-radius: 5px;
+        }
+        .scroll-container::-webkit-scrollbar-track {
+            background-color: black; /* Dark background for the track */
+        }
+
+        /* Responsive adjustment: single column on smaller screens */
+        @media (max-width: 768px) {
+            .container {
+                grid-template-columns: 1fr; /* Switch to single column */
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1>Trending Movies</h1>
+    <div class="scroll-container">
+        <div class="container">
+            <div class="movie"><img src="nw.jpg" alt="Movie 1"></div>
+            <div class="movie"><img src="nw2.jpg" alt="Movie 2"></div>
+            <div class="movie"><img src="nw3.jpg" alt="Movie 3"></div>
+            <div class="movie"><img src="nw4.jpg" alt="Movie 4"></div>
+            <div class="movie"><img src="nw5.jpg" alt="Movie 5"></div>
+            <div class="movie"><img src="nw6.jpg" alt="Movie 6"></div>
+            <div class="movie"><img src="nw7.jpg" alt="Movie 7"></div>
+            <div class="movie"><img src="nw8.jpg" alt="Movie 8"></div>
+            <div class="movie"><img src="nw9.jpg" alt="Movie 9"></div>
+            <div class="movie"><img src="nw10.jpg" alt="Movie 10"></div>
+        </div>
+    </div>
+</body>
+</html>

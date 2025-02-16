@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FlixEdge - Profile</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Arial', sans-serif;
+        }
+
+        body {
+            background: url('fe.webp') no-repeat center center/cover;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            text-align: center;
+        }
+
+        /* Navigation Bar */
+        .navbar {
+            width: 100%;
+            padding: 18px 50px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: rgba(0, 0, 0, 0.7);
+            position: fixed;
+            top: 0;
+            z-index: 3;
+        }
+
+        .navbar h2 {
+            color: #ffcc00;
+            font-size: 30px;
+        }
+
+        .nav-links a {
+            color: #fff;
+            text-decoration: none;
+            margin: 0 18px;
+            font-size: 20px;
+            transition: 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: #ffcc00;
+            text-decoration: underline;
+        }
+
+        /* Profile Card */
+        .profile-card {
+            background: rgba(0, 0, 0, 0.75);
+            padding: 50px;
+            border-radius: 18px;
+            box-shadow: 0 6px 20px rgba(255, 204, 0, 0.4);
+            backdrop-filter: blur(12px);
+            max-width: 450px;
+            text-align: center;
+            color: white;
+        }
+
+        .profile-img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            border: 5px solid #ffcc00;
+            object-fit: cover;
+        }
+
+        .profile-name {
+            font-size: 26px;
+            font-weight: bold;
+            margin-top: 20px;
+        }
+
+        .profile-email {
+            font-size: 18px;
+            opacity: 0.9;
+            margin-bottom: 25px;
+        }
+
+        /* Buttons */
+        .btn {
+            display: block;
+            background: linear-gradient(45deg, #ffcc00, #ff6600);
+            color: white;
+            padding: 14px 30px;
+            margin: 12px 0;
+            border-radius: 30px;
+            font-size: 20px;
+            text-decoration: none;
+            transition: 0.3s ease;
+            box-shadow: 0px 6px 18px rgba(255, 204, 0, 0.5);
+            width: 100%;
+            text-align: center;
+        }
+
+        .btn:hover {
+            background: linear-gradient(45deg, #ff6600, #ffcc00);
+            transform: scale(1.07);
+        }
+
+        .btn-logout {
+            background: linear-gradient(45deg, #ff4444, #ff1100);
+        }
+
+        .btn-logout:hover {
+            background: linear-gradient(45deg, #ff1100, #ff4444);
+        }
+
+        .footer {
+            position: absolute;
+            bottom: 12px;
+            color: #fff;
+            font-size: 16px;
+            opacity: 0.85;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navigation Bar -->
+    <div class="navbar">
+        <h2>FlixEdge</h2>
+        <div class="nav-links">
+            <a href="home.html">Home</a>
+            <a href="cinepolis.html">Movies</a>
+            <a href="contact.html">Contact</a>
+        </div>
+    </div>
+
+    <!-- Profile Card -->
+    <div class="profile-card">
+        <img src="profile.jpg" alt="User Profile Picture" class="profile-img">
+        <h2 class="profile-name">John Doe</h2>
+        <p class="profile-email">johndoe@example.com</p>
+
+        <a href="#" class="btn">Edit Profile</a>
+        <a href="#" class="btn btn-logout">Logout</a>
+    </div>
+
+    <!-- Footer -->
+    <div class="footer">
+        &copy; 2025 FlixEdge | All Rights Reserved
+    </div>
+
+</body>
+</html>

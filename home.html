@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FlixEdge - Home</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Arial', sans-serif;
+        }
+
+        body {
+            background: url('fe.webp') no-repeat center center/cover;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            overflow: hidden;
+        }
+
+        /* Entrance Animation */
+        .frame {
+            background: rgba(0, 0, 0, 0.8);
+            padding: 50px;
+            border-radius: 18px;
+            box-shadow: 0px 10px 30px rgba(255, 204, 0, 0.4);
+            opacity: 0;
+            transform: translateY(50px);
+            animation: fadeIn 1.2s ease-in-out forwards;
+            backdrop-filter: blur(10px);
+            width: 350px;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(50px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        h1 {
+            font-size: 34px;
+            font-weight: bold;
+            color: #ffcc00;
+            margin-bottom: 20px;
+        }
+
+        .btn {
+            display: block;
+            background: linear-gradient(45deg, #ffcc00, #ff6600);
+            color: white;
+            padding: 15px;
+            margin: 15px 0;
+            border-radius: 30px;
+            font-size: 18px;
+            text-decoration: none;
+            transition: 0.3s ease;
+            width: 100%;
+            text-align: center;
+        }
+
+        .btn:hover {
+            background: linear-gradient(45deg, #ff6600, #ffcc00);
+            transform: scale(1.07);
+        }
+
+        .btn-logout {
+            background: linear-gradient(45deg, #ff4444, #ff1100);
+        }
+
+        .btn-logout:hover {
+            background: linear-gradient(45deg, #ff1100, #ff4444);
+        }
+
+    </style>
+</head>
+<body>
+
+    <!-- Home Page Content -->
+    <div class="frame">
+        <h1>Welcome to FlixEdge</h1>
+        
+        <!-- Button to go to Cinepolis -->
+        <a href="cinepolis.html" class="btn">Explore Movies</a>
+        
+        <!-- Profile Button -->
+        <a href="profile.html" class="btn">View Profile</a>
+        
+        <!-- Logout button -->
+        <a href="#" class="btn btn-logout">Logout</a>
+    </div>
+
+</body>
+</html>

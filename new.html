@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Registration</title>
+  <link rel="icon" href="image.png">
+  <style>
+    label{
+      font-weight: bold;
+    }
+    legend{
+      font-weight: bold;
+      text-align: center;
+    }
+    div{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    form{
+      max-width: 350px;
+      background-color:rgb(239, 83, 83);
+      padding: 20px;
+      border-radius: 5px;
+    }
+    input[type="text"],input[type="number"],input[type="email"],input[type="password"],input[type="date"],select{
+      width: 80%;
+      border-radius: 5px;
+      border:none;
+      padding: 5px;;
+    }
+    input[type="submit"],button{
+      background-color:rgb(6, 57, 5);
+      color: white;
+      padding: 10px;
+      border-radius: 5px;
+      border: none;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+  <div>
+    <form action="s.html" method="get">
+      <fieldset>
+        <legend>Registration Form</legend>
+        <label for="name">Name:</label><br><input type="text" name="Name"placeholder="Enter name" id="name" required><br><br>
+        <label for="phone">Phone No:</label><br><input type="number" name="phone"placeholder="Enter phone no" id="phone" autofocus><br><br>
+        <label for="Dob">DOB:</label><br><input type="date" id="Dob" disabled><br><br>
+        <label for="email">Email:</label><br><input type="email" name="email"placeholder="Enter email" id="email" required autocapitalize="A"><br><br>
+        <label for="Address">Address:</label><br><textarea id="Address" readonly></textarea><br><br>
+        <label >Gender:</label>
+        <input type="radio" name="gender" value="Male"><label>Male</label>
+        <input type="radio" name="gender" value="Female"><label>Female</label>
+        <input type="radio" name="gender" value="others"><label>Others</label><br><br>
+        <label for="Education">Education:</label><br>
+        <select name="Education" id="Education">
+          <option value="options">options</option>
+          <optgroup label="CS">
+            <option value="B.Tech">B.Tech</option>
+            <option value="B.E">B.E</option>
+            <option value="M.Tech">M.Tech</option>
+          </optgroup>
+          <optgroup label="Commerce">
+            <option value="B.Com">B.Com</option>
+            <option value="M.Com">M.Com</option>
+          </optgroup>
+        </select><br><br>
+        <label for="lang">Languages Known:</label><br><br>
+        <input type="checkbox" id="lang" name="lang" value="English" checked><label>English</label><br><br>
+        <input type="checkbox" id="lang" name="lang" value="Telugu" checked><label>Telugu</label><br><br>
+        <input type="checkbox" id="lang" name="lang" value="Hindi" checked><label>Hindi</label><br><br>
+        <input type="submit" value="submit"> &emsp; 
+        <button type="reset">Reset</button>
+      </fieldset>
+    </form>
+  </div>
+</body>
+</html>

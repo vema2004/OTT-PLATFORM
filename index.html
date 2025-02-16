@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - FlixEdge</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            background: url('fe.webp') no-repeat center center/cover;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden;
+            position: relative;
+        }
+
+        /* Background Animation */
+        body::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.6);
+            animation: fadeBg 5s infinite alternate;
+        }
+
+        @keyframes fadeBg {
+            0% { background: rgba(0, 0, 0, 0.6); }
+            100% { background: rgba(0, 0, 0, 0.8); }
+        }
+
+        .login-container {
+            position: relative;
+            background: rgba(0, 0, 0, 0.7);
+            padding: 40px;
+            width: 350px;
+            border-radius: 12px;
+            text-align: center;
+            box-shadow: 0px 4px 15px rgba(255, 204, 0, 0.4);
+            animation: popIn 1s ease-in-out;
+        }
+
+        @keyframes popIn {
+            0% { transform: scale(0.8); opacity: 0; }
+            100% { transform: scale(1); opacity: 1; }
+        }
+
+        .login-container h1 {
+            color: #ffcc00;
+            margin-bottom: 20px;
+            font-size: 28px;
+            animation: glowText 2s infinite alternate;
+        }
+
+        @keyframes glowText {
+            0% { text-shadow: 0px 0px 5px #ffcc00; }
+            100% { text-shadow: 0px 0px 15px #ffcc00; }
+        }
+
+        .input-box {
+            width: 100%;
+            margin: 15px 0;
+            position: relative;
+        }
+
+        .input-box input {
+            width: 100%;
+            padding: 12px;
+            border-radius: 6px;
+            border: 2px solid #ffcc00;
+            background: transparent;
+            color: #fff;
+            font-size: 16px;
+            transition: 0.3s ease-in-out;
+        }
+
+        .input-box input:focus {
+            outline: none;
+            border-color: #ffaa00;
+            transform: scale(1.05);
+        }
+
+        .input-box label {
+            position: absolute;
+            top: 14px;
+            left: 12px;
+            color: #aaa;
+            font-size: 14px;
+            transition: 0.3s ease;
+        }
+
+        .input-box input:focus + label,
+        .input-box input:not(:placeholder-shown) + label {
+            top: -10px;
+            left: 10px;
+            font-size: 12px;
+            color: #ffcc00;
+        }
+
+        .btn {
+            width: 100%;
+            padding: 12px;
+            background: #ffcc00;
+            color: #000;
+            border: none;
+            border-radius: 6px;
+            font-size: 18px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: 0.3s ease-in-out;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .btn:hover {
+            background: #ffaa00;
+            box-shadow: 0px 0px 15px rgba(255, 204, 0, 0.7);
+        }
+
+        .options {
+            margin-top: 15px;
+            color: #ccc;
+            animation: fadeIn 2s ease-in-out;
+        }
+
+        @keyframes fadeIn {
+            0% { opacity: 0; }
+            100% { opacity: 1; }
+        }
+
+        .options a {
+            color: #ffcc00;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .options a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="login-container">
+        <h1>Login to FlixEdge</h1>
+        <form action="home.html" method="get"> 
+            <div class="input-box">
+                <input type="text" required placeholder=" " name="username">
+                <label>Username</label>
+            </div>
+            <div class="input-box">
+                <input type="password" required placeholder=" " name="password">
+                <label>Password</label>
+            </div>
+            <button type="submit" class="btn">Login</button>
+        </form>
+        <div class="options">
+            <p>Don't have an account? <a href="#">Sign Up</a></p>
+            <p><a href="#">Forgot Password?</a></p>
+        </div>
+    </div>
+
+</body>
+</html>

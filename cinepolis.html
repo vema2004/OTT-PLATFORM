@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movie Hub</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #121212;
+            color: white;
+            padding: 20px;
+        }
+
+        .header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 40px;
+        }
+
+        .logo img {
+            height: 150px;
+            width: 400px;
+        }
+
+        .nav-search {
+            display: flex;
+            align-items: center;
+        }
+
+        .nav {
+            margin-left: 20px;
+        }
+
+        .nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 10px;
+            font-weight: bold;
+            padding: 8px 15px;
+            border: 2px solid #ffcc00;
+            border-radius: 5px;
+            transition: all 0.3s ease;
+            display: inline-block;
+        }
+
+        .nav a:hover {
+            background-color: #ffcc00;
+            color: #000;
+        }
+
+        .search-box {
+            padding: 5px;
+            border-radius: 5px;
+            border: none;
+        }
+
+        .content {
+            text-align: center;
+            font-size: 1.5em;
+        }
+
+        .subscribe-link {
+            display: inline-block;
+            background-color: #ffcc00;
+            color: #000;
+            padding: 10px 20px;
+            text-decoration: none;
+            font-weight: bold;
+            border-radius: 5px;
+        }
+
+        .subscribe-link:hover {
+            background-color: #ffaa00;
+        }
+
+        .categories {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 20px;
+            margin-top: 40px;
+        }
+
+        .category {
+            background: linear-gradient(135deg, #444, #222);
+            color: white;
+            padding: 20px;
+            border-radius: 10px;
+            border: 3px solid #ffcc00;
+            box-shadow: 0 4px 8px rgba(255, 204, 0, 0.3);
+            text-align: center;
+            font-weight: bold;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .category:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 6px 12px rgba(255, 204, 0, 0.5);
+        }
+
+        .movies {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+            gap: 15px;
+            padding: 10px;
+        }
+
+        .movies button {
+            background: none;
+            border: none;
+            cursor: pointer;
+            padding: 0;
+        }
+
+        .movies button img {
+            width: 100%;
+            height: 220px;
+            border-radius: 8px;
+            border: 2px solid #ffcc00;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .movies button img:hover {
+            transform: scale(1.05);
+            box-shadow: 0 4px 10px rgba(255, 204, 0, 0.5);
+        }
+
+        .search-box {
+            width: 300px;
+            /* Increased width */
+            padding: 12px 15px;
+            /* Better padding */
+            font-size: 16px;
+            border: 3px solid #ffcc00;
+            border-radius: 25px;
+            /* Rounded corners */
+            background: #222;
+            color: white;
+            outline: none;
+            transition: 0.3s ease-in-out;
+        }
+
+        .search-box:focus {
+            box-shadow: 0px 0px 10px rgba(255, 204, 0, 0.8);
+            border-color: #ffaa00;
+        }
+
+        .search-btn {
+            background: #ffcc00;
+            border: none;
+            padding: 12px 18px;
+            font-size: 16px;
+            font-weight: bold;
+            color: #000;
+            border-radius: 25px;
+            cursor: pointer;
+            margin-left: 10px;
+            transition: 0.3s;
+        }
+
+        .search-btn:hover {
+            background: #ffaa00;
+        }
+    </style>
+
+
+</head>
+
+<body>
+    <div class="header">
+        <div class="nav-search">
+            <div class="search-container">
+                <input type="text" class="search-box" placeholder="Search movies...">
+                <button class="search-btn">🔍 Search</button>
+            </div>
+            <div class="nav">
+                <a href="home.html">Home</a>
+                <a href="trending.html">Trending</a>
+                <a href="contact.html">Contact</a>
+            </div>
+        </div>
+        <a href="subscription.html" class="subscribe-link">Subscribe</a>
+    </div>
+    <div class="content">
+        Discover the latest movies and exclusive premieres!
+    </div>
+
+    <div class="categories">
+        <div class="category">Telugu Movies
+            <div class="movies">
+                <button onclick="window.open('https://www.youtube.com/watch?v=bm7RmpzfrRU', '_blank')">
+                    <img src="f11.jpg" width="100%" height="250px" alt="Salaar Movie">
+                </button>
+                <button onclick="window.open('https://www.youtube.com/watch?v=LS6XiINMc2s', '_blank')">
+                    <img src="x.jpg" width="100%" height="250px" alt="Kick Movie">
+                </button>
+                <button onclick="window.open('https://www.youtube.com/watch?v=UGiX1Qq9Zn8', '_blank')">
+                    <img src="f13.jpg" width="100%" height="250px" alt="Spyder Movie">
+                </button>
+                <button onclick="window.open('https://www.youtube.com/watch?v=stG0g3CuYgM', '_blank')">
+                    <img src="f14.jpg" width="100%" height="250px" alt="Mass Movie">
+                </button>
+            </div>
+
+            <div class="category">Hindi Movies
+                <div class="movies">
+                    <button
+                        onclick="window.open('https://www.youtube.com/playlist?list=PLHpoBgAAgIwTon1zz5c1QR-n9-1umPu0F', '_blank')">c:\Users\VEMA
+                        REDDY\Downloads\x.jpg
+                        <img src="h1.jpg" width="100%" height="250px" alt="Salaar Movie">
+                    </button>
+                    <button onclick="window.open('https://www.youtube.com/watch?v=5QDKX5ExXqM', '_blank')">
+                        <img src="h2.jpg" width="100%" height="250px" alt="Kick Movie">
+                    </button>
+                    <button
+                        onclick="window.open('https://www.youtube.com/playlist?list=PLIQFyS0-Hv_yQvB6Tt1fqdjLvh1ZMabTQ', '_blank')">
+                        <img src="h3.jpg" width="100%" height="250px" alt="Spyder Movie">
+                    </button>
+                    <button onclick="window.open('https://www.youtube.com/watch?v=T10LSBUr_Bo', '_blank')">
+                        <img src="h4.jpg" width="100%" height="250px" alt="Mass Movie">
+                    </button>
+                </div>
+            </div>
+            <div class="category">Kannada Movies
+                <div class="movies">
+                    <button onclick="window.open('https://www.youtube.com/watch?v=x9BODr8GkpE', '_blank')">
+                        <img src="ka1.jpg" width="100%" height="250px" alt="Salaar Movie">
+                    </button>
+                    <button onclick="window.open('https://www.youtube.com/watch?v=YA1B_sFL0l8', '_blank')">
+                        <img src="ka2.jpg" width="100%" height="250px" alt="Kick Movie">
+                    </button>
+                    <button onclick="window.open('https://www.youtube.com/channel/UCZaVCXWtPFbEM1RnQQC1qOQ', '_blank')">
+                        <img src="ka3.jpg" width="100%" height="250px" alt="Spyder Movie">
+                    </button>
+                    <button onclick="window.open('https://www.youtube.com/watch?v=2q6eGgjJ0V4', '_blank')">
+                        <img src="ka4.jpg" width="100%" height="250px" alt="Mass Movie">
+                    </button>
+                </div>
+            </div>
+            <div class="category">Tamil Movies
+                <div class="movies">
+                    <button onclick="window.open('https://www.youtube.com/watch?v=CmPRGaMkTj8', '_blank')">
+                        <img src="ta1.jpg" width="100%" height="250px" alt="Salaar Movie">
+                    </button>
+                    <button onclick="window.open('https://www.youtube.com/watch?v=SURyp5rCYLE', '_blank')">
+                        <img src="ta2.jpg
+                    " width="100%" height="250px" alt="Kick Movie">
+                    </button>
+                    <button onclick="window.open('https://www.youtube.com/watch?v=vUobnItNDFo', '_blank')">
+                        <img src="ta3.jpg" width="100%" height="250px" alt="Spyder Movie">
+                    </button>
+                    <button
+                        onclick="window.open('https://www.youtube.com/playlist?list=PLadMTFOb36i0nTZZ2itu3yEdsiT15Iist', '_blank')">
+                        <img src="ta4.jpg" width="100%" height="250px" alt="Mass Movie">
+                    </button>
+                </div>
+            </div>
+            <div class="category">Animation
+                <div class="movies">
+                    <button onclick="window.open('https://www.youtube.com/watch?v=d3HwTuxen20', '_blank')">
+                        <img src="a1.jpg" width="100%" height="250px" alt="Salaar Movie">
+                    </button>
+                    <button onclick="window.open('https://www.youtube.com/watch?v=MEeDYtDUNjY', '_blank')">
+                        <img src="a2.jpg" width="100%" height="250px" alt="Kick Movie">
+                    </button>
+                    <button
+                        onclick="window.open('https://www.youtube.com/playlist?list=PLCriYrweK009z0sjV42ll5DEIf53SfnX_', '_blank')">
+                        <img src="a3.jpg" width="100%" height="250px" alt="Spyder Movie">
+                    </button>
+                    <button onclick="window.open('https://www.youtube.com/watch?v=2_Cej0gyVhY', '_blank')">
+                        <img src="a4.jpg" width="100%" height="250px" alt="Mass Movie">
+                    </button>
+                </div>
+            </div>
+            <div class="category">Malayalam Movies
+                <div class="movies">
+                    <button onclick="window.open('https://www.youtube.com/watch?v=m1jVCD5prGA', '_blank')">
+                        <img src="ma1.jpg" width="100%" height="250px" alt="Salaar Movie">
+                    </button>
+                    <button
+                        onclick="window.open('https://www.youtube.com/playlist?list=PLzJABCUtcHT4Mp4bvHuEw8Ho5CGLn-ikT', '_blank')">
+                        <img src="ma2.jpg" width="100%" height="250px" alt="Kick Movie">
+                    </button>
+                    <button onclick="window.open('https://www.youtube.com/watch?v=v8MNgoYHWWk', '_blank')">
+                        <img src="ma3.jpg" width="100%" height="250px" alt="Spyder Movie">
+                    </button>
+                    <button onclick="window.open('https://www.youtube.com/watch?v=stG0g3CuYgM', '_blank')">
+                        <img src="ma4.jpg" width="100%" height="250px" alt="Mass Movie">
+                    </button>
+                </div>
+            </div>
+        </div>
+</body>
+
+</html>
